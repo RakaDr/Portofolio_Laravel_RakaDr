@@ -18,7 +18,11 @@
          NAVIGATION
          ============================================ -->
     <nav class="nav" id="nav">
-        <a href="#" class="nav-logo">RAKA.</a>
+        <a href="#" class="nav-logo" style="display: flex; align-items: center; gap: 12px;">
+            <img src="{{ asset('images/logo.png') }}" alt="Logo Raka"
+                style="height: 36px; width: auto; border: 2px solid #111; border-radius: 8px; box-shadow: 2px 2px 0px #111;">
+            RAKA.
+        </a>
         <ul class="nav-links" id="navLinks">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -47,7 +51,7 @@
 
         <div class="hero-container">
             <div class="hero-content">
-                <p class="hero-greeting mono">Hello, I'm Raka</p>
+                <p class="hero-greeting mono">Hello, I'm Raka Dwi Randika</p>
                 <h1 class="hero-title">
                     <span>Cyber</span>
                     <span>Security</span>
@@ -58,14 +62,13 @@
                     and passionate about teaching programming & AI to the next generation of developers.
                 </p>
                 <div class="hero-cta">
-                    <a href="#projects" class="btn">View My Work</a>
+                    <a href="#projects" class="btn">View My Project</a>
                     <a href="#contact" class="btn btn-dark">Get In Touch</a>
                 </div>
             </div>
             <div class="hero-image-wrapper">
                 <div class="hero-image-bg"></div>
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop&crop=face"
-                    alt="Raka - Cyber Security Student" class="hero-image">
+                <img src="{{ asset('images/Raka.png') }}" alt="Raka - Cyber Security Student" class="hero-image">
             </div>
         </div>
     </section>
@@ -75,10 +78,12 @@
             <span class="mono">CYBER SECURITY ENTHUSIAST</span> <span class="star">✦</span>
             <span class="mono">AVAILABLE FOR FREELANCE</span> <span class="star">✦</span>
             <span class="mono">CREATIVE CODER</span> <span class="star">✦</span>
+            <span class="mono">LOVE VIBE CODING</span> <span class="star">✦</span>
             <span class="mono">OPEN TO WORK</span> <span class="star">✦</span>
             <span class="mono">CYBER SECURITY ENTHUSIAST</span> <span class="star">✦</span>
             <span class="mono">AVAILABLE FOR FREELANCE</span> <span class="star">✦</span>
             <span class="mono">CREATIVE CODER</span> <span class="star">✦</span>
+            <span class="mono">LOVE VIBE CODING</span> <span class="star">✦</span>
         </div>
     </div>
     <!-- ============================================
@@ -120,7 +125,9 @@
         <div class="skills-grid">
             <!-- Programming -->
             <div class="skill-category">
-                <div class="skill-icon">💻</div>
+                <div class="skill-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                </div>
                 <h3 class="skill-title">Programming</h3>
                 <ul class="skill-list">
                     <li>Python</li>
@@ -136,7 +143,9 @@
 
             <!-- Security -->
             <div class="skill-category">
-                <div class="skill-icon">🔒</div>
+                <div class="skill-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                </div>
                 <h3 class="skill-title">Security</h3>
                 <ul class="skill-list">
                     <li>Penetration Testing</li>
@@ -152,7 +161,9 @@
 
             <!-- Tools & Other -->
             <div class="skill-category">
-                <div class="skill-icon">🛠️</div>
+                <div class="skill-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                </div>
                 <h3 class="skill-title">Tools & Other</h3>
                 <ul class="skill-list">
                     <li>DevOps Basics</li>
@@ -284,17 +295,17 @@
                 <ul class="contact-links">
                     <li>
                         <a href="mailto:randikaraka19@gmail.com">
-                            <span>📧</span> randikaraka19@gmail.com
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>randikaraka19@gmail.com
                         </a>
                     </li>
                     <li>
                         <a href="https://www.linkedin.com/in/raka-dwi-randika-a856b433a/" target="_blank">
-                            <span>💼</span> LinkedIn
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg> LinkedIn
                         </a>
                     </li>
                     <li>
                         <a href="https://github.com/RakaDr" target="_blank">
-                            <span>🐙</span> GitHub
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg> GitHub
                         </a>
                     </li>
                 </ul>
