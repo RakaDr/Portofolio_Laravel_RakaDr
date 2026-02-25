@@ -46,7 +46,11 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     this.reset();
 });
 
-// Scroll animations
+// ============================================
+// ADVANCED ANIMATIONS (NEW)
+// ============================================
+
+// 1. Staggered Scroll Animations (Intersection Observer)
 const observerOptions = {
     threshold: 0.1,
     rootMargin: "0px 0px -50px 0px",
@@ -56,10 +60,47 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
             entry.target.classList.add("visible");
+            // Optional: Unobserve setelah muncul agar animasi tidak berulang terus
+            // observer.unobserve(entry.target);
         }
     });
 }, observerOptions);
 
+// Berikan delay bertingkat pada item di dalam grid agar muncul berurutan
+const grids = document.querySelectorAll('.skills-grid, .projects-grid, .timeline');
+grids.forEach(grid => {
+    const items = grid.querySelectorAll('.skill-category, .project-card, .timeline-item');
+    items.forEach((item, index) => {
+        item.classList.add('animate-on-scroll');
+        // Tambahkan class delay-1, delay-2, atau delay-3 berulang
+        const delayClass = `delay-${(index % 3) + 1}`;
+        item.classList.add(delayClass);
+        observer.observe(item);
+    });
+});
+
+// Observasi elemen lain yang ingin dianimasikan
+document.querySelectorAll('.about-content, .contact-info, .contact-form-wrapper').forEach((el) => {
+    el.classList.add("animate-on-scroll");
+    observer.observe(el);
+});
+
+// 2. Parallax Scroll Effect pada Dekorasi
+const parallaxElements = document.querySelectorAll('.parallax');
+
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    
+    // Gunakan requestAnimationFrame untuk performa animasi scroll yang smooth
+    requestAnimationFrame(() => {
+        parallaxElements.forEach(el => {
+            const speed = el.getAttribute('data-speed');
+            // Geser posisi Y elemen berdasarkan kecepatan scroll
+            const yPos = -(scrollY * speed);
+            el.style.transform = `translateY(${yPos}px)`;
+        });
+    });
+});
 // Observe elements for animation
 document
     .querySelectorAll(".skill-category, .project-card, .timeline-item")

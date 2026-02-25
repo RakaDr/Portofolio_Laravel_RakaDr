@@ -39,11 +39,11 @@
          ============================================ -->
     <section class="hero" id="home">
         <!-- Decorations -->
-        <div class="deco deco-c hero-deco-1"></div>
-        <div class="deco deco-plus hero-deco-2"></div>
-        <div class="deco deco-circle hero-deco-3"></div>
-        <div class="deco deco-arc-yellow hero-deco-4"></div>
-        <div class="deco deco-circle deco-circle-purple hero-deco-5"></div>
+        <div class="deco deco-c hero-deco-1 spin-slow parallax" data-speed="0.1"></div>
+        <div class="deco deco-plus hero-deco-2 float parallax" data-speed="-0.15"></div>
+        <div class="deco deco-circle hero-deco-3 float parallax" data-speed="0.05"></div>
+        <div class="deco deco-arc-yellow hero-deco-4 spin-slow parallax" data-speed="-0.1"></div>
+        <div class="deco deco-circle deco-circle-purple hero-deco-5 parallax" data-speed="0.2"></div>
 
         <div class="hero-container">
             <div class="hero-content">
@@ -69,7 +69,18 @@
             </div>
         </div>
     </section>
-
+    <div class="marquee-wrapper">
+        <div class="marquee-content">
+            <span class="mono">OPEN TO WORK</span> <span class="star">✦</span>
+            <span class="mono">CYBER SECURITY ENTHUSIAST</span> <span class="star">✦</span>
+            <span class="mono">AVAILABLE FOR FREELANCE</span> <span class="star">✦</span>
+            <span class="mono">CREATIVE CODER</span> <span class="star">✦</span>
+            <span class="mono">OPEN TO WORK</span> <span class="star">✦</span>
+            <span class="mono">CYBER SECURITY ENTHUSIAST</span> <span class="star">✦</span>
+            <span class="mono">AVAILABLE FOR FREELANCE</span> <span class="star">✦</span>
+            <span class="mono">CREATIVE CODER</span> <span class="star">✦</span>
+        </div>
+    </div>
     <!-- ============================================
          ABOUT SECTION
          ============================================ -->
@@ -272,17 +283,17 @@
                 </p>
                 <ul class="contact-links">
                     <li>
-                        <a href="mailto:hello@raka.dev">
-                            <span>📧</span> hello@raka.dev
+                        <a href="mailto:randikaraka19@gmail.com">
+                            <span>📧</span> randikaraka19@gmail.com
                         </a>
                     </li>
                     <li>
-                        <a href="#" target="_blank">
+                        <a href="https://www.linkedin.com/in/raka-dwi-randika-a856b433a/" target="_blank">
                             <span>💼</span> LinkedIn
                         </a>
                     </li>
                     <li>
-                        <a href="#" target="_blank">
+                        <a href="https://github.com/RakaDr" target="_blank">
                             <span>🐙</span> GitHub
                         </a>
                     </li>
