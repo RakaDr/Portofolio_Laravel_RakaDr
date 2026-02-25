@@ -13,15 +13,15 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body>
+<body style="--logo-url: url('{{ asset('images/Logo.png') }}');">
     <!-- ============================================
          NAVIGATION
          ============================================ -->
     <nav class="nav" id="nav">
         <a href="#" class="nav-logo" style="display: flex; align-items: center; gap: 12px;">
             <img src="{{ asset('images/logo.png') }}" alt="Logo Raka"
-                style="height: 36px; width: auto; border: 2px solid #111; border-radius: 8px; box-shadow: 2px 2px 0px #111;">
-            RAKA.
+                style="height: 36px; width: auto; border: 2px solid #1C1A16; border-radius: 8px; box-shadow: 2px 2px 0px #1C1A16;">
+            RAKA_DR
         </a>
         <ul class="nav-links" id="navLinks">
             <li><a href="#home">Home</a></li>
@@ -126,7 +126,11 @@
             <!-- Programming -->
             <div class="skill-category">
                 <div class="skill-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="#1C1A16" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
                 </div>
                 <h3 class="skill-title">Programming</h3>
                 <ul class="skill-list">
@@ -144,7 +148,10 @@
             <!-- Security -->
             <div class="skill-category">
                 <div class="skill-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="#1C1A16" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
                 </div>
                 <h3 class="skill-title">Security</h3>
                 <ul class="skill-list">
@@ -162,7 +169,12 @@
             <!-- Tools & Other -->
             <div class="skill-category">
                 <div class="skill-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                        stroke="#1C1A16" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter">
+                        <path
+                            d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                        </path>
+                    </svg>
                 </div>
                 <h3 class="skill-title">Tools & Other</h3>
                 <ul class="skill-list">
@@ -223,8 +235,11 @@
         <div class="projects-grid">
             <!-- Project 1 -->
             <div class="project-card">
-                <img src="https://images.unsplash.com/photo-1667372393119-c8f473882e8e?w=600&h=400&fit=crop"
-                    alt="AmbatuOps Project" class="project-image">
+                <div class="project-image">
+                    <div class="halftone-wrapper project-image-wrapper">
+                        <img src="https://placehold.co/600x400/C8F000/1C1A16?text=AMBATU-OPS+PROJECT" alt="AmbatuOps Project" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
                 <div class="project-content">
                     <p class="project-number mono">01 / DevOps</p>
                     <h3 class="project-title">AmbatuOps</h3>
@@ -242,8 +257,11 @@
 
             <!-- Project 2 -->
             <div class="project-card">
-                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop"
-                    alt="Java JSP Web App" class="project-image">
+                <div class="project-image">
+                    <div class="halftone-wrapper project-image-wrapper">
+                        <img src="https://placehold.co/600x400/C8F000/1C1A16?text=AMBATU-OPS+PROJECT" alt="AmbatuOps Project" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
                 <div class="project-content">
                     <p class="project-number mono">02 / Web App</p>
                     <h3 class="project-title">Java JSP CRUD App</h3>
@@ -261,8 +279,11 @@
 
             <!-- Project 3 -->
             <div class="project-card">
-                <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop"
-                    alt="Security Tools" class="project-image">
+                <div class="project-image">
+                    <div class="halftone-wrapper project-image-wrapper">
+                        <img src="https://placehold.co/600x400/C8F000/1C1A16?text=AMBATU-OPS+PROJECT" alt="AmbatuOps Project" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
                 <div class="project-content">
                     <p class="project-number mono">03 / Security</p>
                     <h3 class="project-title">Python Security Tools</h3>
@@ -295,17 +316,37 @@
                 <ul class="contact-links">
                     <li>
                         <a href="mailto:randikaraka19@gmail.com">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>randikaraka19@gmail.com
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="#1C1A16" stroke-width="3" stroke-linecap="square"
+                                stroke-linejoin="miter">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>randikaraka19@gmail.com
                         </a>
                     </li>
                     <li>
                         <a href="https://www.linkedin.com/in/raka-dwi-randika-a856b433a/" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg> LinkedIn
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="#1C1A16" stroke-width="3" stroke-linecap="square"
+                                stroke-linejoin="miter">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg> LinkedIn
                         </a>
                     </li>
                     <li>
                         <a href="https://github.com/RakaDr" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg> GitHub
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="#1C1A16" stroke-width="3" stroke-linecap="square"
+                                stroke-linejoin="miter">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg> GitHub
                         </a>
                     </li>
                 </ul>
