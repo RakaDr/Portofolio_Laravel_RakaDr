@@ -14,8 +14,9 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body
-    style="--logo-url: url('{{ asset('images/Logo.png') }}'); --partikel-url: url('{{ asset('images/partikel.png') }}');">
+<body style="--logo-url: url('{{ asset('images/Logo.png') }}'); --partikel-url: url('{{ asset('images/partikel.png') }}');">
+
+    <div class="global-noise"></div>
 
     @include('sections.navbar')
     @include('sections.hero')

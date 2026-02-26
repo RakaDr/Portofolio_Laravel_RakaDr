@@ -1,19 +1,5 @@
 <section class="skills" id="skills">
 
-    <div class="deco deco-partikel violet float-random"
-        style="top: 8%; right: 15%; width: 45px; height: 45px; animation-delay: 0.5s;"></div>
-    <div class="deco deco-partikel orange float-random"
-        style="bottom: 5%; left: 5%; width: 80px; height: 80px; opacity: 0.6; animation-delay: 1.2s;"></div>
-    <div class="deco deco-partikel dark float-random"
-        style="top: 45%; left: 50%; width: 35px; height: 35px; animation-delay: 0.8s;"></div>
-    <div class="deco deco-partikel violet float-random"
-        style="bottom: 15%; right: 25%; width: 55px; height: 55px; animation-delay: 2.1s;"></div>
-    <div class="deco deco-partikel orange float-random"
-        style="top: 25%; left: 8%; width: 40px; height: 40px; opacity: 0.8; animation-delay: 0.4s;"></div>
-    <div class="deco deco-partikel orange float-random"
-        style="bottom: 5%; left: 5%; width: 80px; height: 80px; opacity: 0.6; animation-delay: 1.2s;"></div>
-    <div class="deco deco-partikel dark float-random"
-        style="top: 50%; left: 50%; width: 30px; height: 30px; animation-delay: 0.8s;"></div>
     <div class="skills-header">
         <p class="section-label mono">My Expertise</p>
         <h2>Skills & Tools</h2>

@@ -1,12 +1,4 @@
 <section class="projects" id="projects">
-    <div class="deco deco-partikel lime float-random"
-        style="top: 5%; left: 12%; width: 55px; height: 55px; animation-delay: 0.7s;"></div>
-    <div class="deco deco-partikel yellow float-random"
-        style="bottom: 8%; right: 10%; width: 50px; height: 50px; animation-delay: 0.1s;"></div>
-    <div class="deco deco-partikel orange float-random"
-        style="top: 35%; right: 40%; width: 65px; height: 65px; opacity: 0.4; animation-delay: 1.1s;"></div>
-    <div class="deco deco-partikel lime float-random"
-        style="bottom: 25%; left: 5%; width: 40px; height: 40px; animation-delay: 1.9s;"></div>
     <div class="projects-header">
         <p class="section-label mono">Projects</p>
         <h2>Featured Work</h2>

@@ -1,12 +1,4 @@
 <section class="contact" id="contact">
-    <div class="deco deco-partikel dark float-random"
-        style="top: 12%; right: 15%; width: 60px; height: 60px; animation-delay: 0.9s;"></div>
-    <div class="deco deco-partikel white float-random"
-        style="bottom: 20%; left: 8%; width: 75px; height: 75px; opacity: 0.7; animation-delay: 1.4s;"></div>
-    <div class="deco deco-partikel violet float-random"
-        style="top: 40%; left: 15%; width: 45px; height: 45px; animation-delay: 0.3s;"></div>
-    <div class="deco deco-partikel dark float-random"
-        style="bottom: 10%; right: 35%; width: 35px; height: 35px; animation-delay: 2.1s;"></div>
     <div class="contact-container">
         <div class="contact-info">
             <p class="section-label mono">Contact</p>

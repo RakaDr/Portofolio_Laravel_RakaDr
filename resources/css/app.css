@@ -32,6 +32,28 @@
     --radius-pill: 999px;
 }
 
+/* ============================================
+   CUSTOM BRUTALIST SCROLLBAR
+   ============================================ */
+   ::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+    border-left: var(--border-thick);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--violet);
+    border: var(--border-thick);
+    border-radius: 0px; /* Sengaja dibuat kotak tajam */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--lime);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -183,7 +205,7 @@ h3 {
 
 /* Perubahan warna background saat di-hover */
 .project-card:hover {
-    background-color: var(--color-orange-600) !important;
+    background-color: var(--orange) !important;
 }
 
 .skill-category:hover {
@@ -293,6 +315,7 @@ h3 {
 .contact {
     padding: 100px 5vw;
     position: relative;
+    overflow: hidden;
 }
 
 /* HERO */
@@ -783,8 +806,9 @@ h3 {
 .form-input:focus,
 .form-textarea:focus {
     outline: none;
-    background: var(--white);
-    box-shadow: 4px 4px 0px var(--border-color);
+    background: var(--lime); /* Background berubah Lime saat mengetik */
+    box-shadow: 6px 6px 0px var(--border-color);
+    transform: translate(-2px, -2px); /* Form sedikit terangkat saat di-klik */
 }
 
 .form-textarea {
@@ -1161,8 +1185,14 @@ h3 {
 /* =========================================
    STYLE & ANIMASI PARTIKEL
    ========================================= */
-.deco-partikel {
+.partikel-wrapper {
     position: absolute;
+    z-index: 0;
+    pointer-events: none; /* Memastikan kursor tembus tidak menghalangi tombol */
+}
+.deco-partikel {
+    width: 100%;
+    height: 100%;
     -webkit-mask-image: var(--partikel-url);
     mask-image: var(--partikel-url);
     -webkit-mask-size: contain;
@@ -1171,24 +1201,12 @@ h3 {
     mask-repeat: no-repeat;
     -webkit-mask-position: center;
     mask-position: center;
-    z-index: 0;
     
-    /* UBAH INI: Aktifkan kursor agar bisa disentuh */
-    pointer-events: auto;
-    cursor: crosshair; /* Kursor target/tembak ala brutalist */
-    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1.25), background-color 0.2s, filter 0.2s;
+    /* Transisi pegas yang sangat kaku agar lompatan menjauhnya terasa nyata */
+    transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1.25);
 }
 
-/* EFEK HOVER PARTIKEL */
-.deco-partikel:hover {
-    /* Saat disentuh: Animasi melayang berhenti, partikel membesar drastis, berubah Oranye */
-    animation-play-state: paused !important;
-    transform: scale(2) rotate(25deg) !important;
-    background-color: var(--orange) !important;
-    /* Memberikan bayangan kasar pada partikel SVG/Mask */
-    filter: drop-shadow(4px 4px 0px var(--border-color));
-    z-index: 100;
-}
+
 
 /* Pewarnaan Partikel */
 /* Pewarnaan Partikel */
@@ -1252,6 +1270,41 @@ h3 {
     transition-delay: 0.3s;
 }
 
+/* =========================================
+   MENGAMANKAN KONTEN UTAMA DARI PARTIKEL
+   ========================================= */
+/* Memaksa semua kontainer teks dan card untuk selalu berada di atas partikel */
+.hero-container, 
+.about-container, 
+.skills-header, 
+.skills-grid, 
+.experience-header, 
+.experience-container, 
+.projects-header, 
+.projects-grid, 
+.contact-container, 
+.footer-container {
+    position: relative;
+    z-index: 10;
+}
+
+/* Memastikan partikel tetap di layer paling bawah */
+.deco-partikel {
+    z-index: 0 !important;
+}
+.global-noise {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999; /* Berada di lapisan paling atas */
+    pointer-events: none; /* Tidak mengganggu klik tombol */
+    /* Membuat tekstur bintik-bintik komik/koran */
+    background-image: radial-gradient(circle, var(--border-color) 20%, transparent 20%);
+    background-size: 4px 4px;
+    opacity: 0.05; /* Dibuat sangat transparan agar estetik dan tidak merusak warna */
+}
 /* Responsive Mobile */
 @media (max-width: 1024px) {
 
@@ -1324,8 +1377,9 @@ h3 {
     }
 
     .footer-links {
-        flex-direction: column;
-        gap: 40px;
+        flex-direction: row;
+        gap: 50px;
+        width: 100%;
     }
 
     .deco:not(.deco-partikel) {

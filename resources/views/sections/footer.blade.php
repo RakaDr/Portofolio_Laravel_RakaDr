@@ -1,16 +1,5 @@
 <footer class="footer">
-    <div class="deco deco-partikel lime float-random"
-        style="top: 15%; left: 8%; width: 50px; height: 50px; animation-delay: 0.2s;"></div>
-    <div class="deco deco-partikel white float-random"
-        style="bottom: 15%; right: 10%; width: 70px; height: 70px; opacity: 0.8; animation-delay: 1.5s;"></div>
-    <div class="deco deco-partikel yellow float-random"
-        style="top: 60%; left: 5%; width: 40px; height: 40px; animation-delay: 1.1s;"></div>
-    <div class="deco deco-partikel lime float-random"
-        style="top: 10%; right: 40%; width: 35px; height: 35px; animation-delay: 0.6s;"></div>
-    <div class="deco deco-partikel lime float-random"
-        style="top: 15%; left: 8%; width: 50px; height: 50px; animation-delay: 0.2s;"></div>
-    <div class="deco deco-partikel white float-random"
-        style="bottom: 15%; right: 10%; width: 70px; height: 70px; opacity: 0.8; animation-delay: 1.5s;"></div>
+    
 
     <div class="footer-container">
         <div class="footer-brand">
