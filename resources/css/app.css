@@ -923,11 +923,25 @@ h3 {
 /* ============================================
    5. FOOTER & ANIMATIONS
    ============================================ */
-.footer {
+   .footer {
     background: var(--violet);
     border-top: var(--border-thick);
     padding: 80px 5vw 0 5vw;
     overflow: hidden;
+    position: relative; /* Wajib relative agar halftone bisa menempel di dalam */
+}
+
+/* Tambahan Efek Halftone/Titik-titik untuk Footer */
+.footer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1; /* Berada tepat di atas warna background ungu */
+    background-image: radial-gradient(circle, var(--border-color) 25%, transparent 25%);
+    background-size: 6px 6px; /* Ukuran titik dibuat sedikit lebih besar */
+    opacity: 0.2; /* Transparansi agar tidak terlalu mencolok */
+    mix-blend-mode: overlay;
+    pointer-events: none;
 }
 
 .footer-container {
@@ -938,8 +952,9 @@ h3 {
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 60px;
+    position: relative;
+    z-index: 2; /* Wajib z-index 2 agar konten teks tidak tertimpa halftone */
 }
-
 .footer-brand {
     max-width: 400px;
 }
@@ -1015,6 +1030,8 @@ h3 {
     background: var(--lime);
     border-top: var(--border-thick);
     text-align: center;
+    position: relative; /* Tambahkan ini */
+    z-index: 2;         /* Tambahkan ini */
 }
 
 .footer-copyright {
@@ -1311,7 +1328,7 @@ h3 {
         gap: 40px;
     }
 
-    .deco {
+    .deco:not(.deco-partikel) {
         display: none;
     }
 }
