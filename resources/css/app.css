@@ -210,6 +210,13 @@ h3 {
     font-weight: 600;
 }
 
+
+/* Mengubah teks timeline menjadi putih saat di-hover */
+.timeline-item:hover .timeline-date,
+.timeline-item:hover .timeline-company {
+    color: var(--white) !important;
+}
+
 /* Mengamankan ujung gambar di dalam Card */
 .project-image {
     overflow: hidden;
@@ -258,11 +265,7 @@ h3 {
     border-bottom: var(--border-thick);
 }
 
-.hero-image-wrapper {
-    box-shadow: var(--shadow-hard);
-    border-radius: var(--radius-card);
-    overflow: hidden;
-}
+
 
 .project-card .project-image img {
     transition: transform 0.4s ease;
@@ -390,6 +393,7 @@ h3 {
     margin: 0 auto;
     z-index: 2;
     cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1.25);
 }
 
 /* Foto Utama */
@@ -422,20 +426,22 @@ h3 {
     transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1.25);
 }
 
+/* =========================================
+   HOVER HERO IMAGE: EXTREME BRUTALISM UPGRADE
+   ========================================= */
 .hero-image-wrapper:hover .hero-image {
-    /* Foto melompat lebih jauh, membesar, dan miring tajam ke kiri */
-    transform: translate(-16px, -16px) rotate(-4deg) scale(1.02);
-    box-shadow: 20px 20px 0px var(--border-color);
-    /* Foto mendadak jadi hitam-putih kontras tinggi untuk kesan 'pemberontak' */
-    filter: grayscale(100%) contrast(130%);
+    /* Melompat lebih ekstrem, miring, dengan efek DOUBLE SHADOW (Hitam & Oranye) */
+    transform: translate(-20px, -20px) rotate(-5deg) scale(1.02);
+    box-shadow: 15px 15px 0px var(--border-color), 25px 25px 0px var(--orange);
+    /* Foto jadi hitam-putih pekat ala poster cetak jadul */
+    filter: grayscale(100%) contrast(180%);
 }
 
 .hero-image-wrapper:hover .hero-image-bg {
-    /* Kotak ungu di belakang melompat ke kanan, miring kebalikan, dan berubah jadi Lime */
-    transform: translate(16px, 16px) rotate(6deg);
+    /* Kotak ungu terpental ke arah sebaliknya, berputar tajam, jadi Lime */
+    transform: translate(25px, 20px) rotate(12deg);
     background: var(--lime);
     border: 4px solid var(--border-color);
-    /* Border menebal sesaat */
 }
 
 /* ABOUT (Violet) */
@@ -968,13 +974,13 @@ h3 {
 
 .footer-column h4 {
     background: var(--border-color);
-    color: var(--yellow-lum);
+    color: var(--bg-secondary);
     display: inline-block;
     padding: 8px 16px;
     font-weight: 700;
     font-size: 14px;
     transform: rotate(-3deg);
-    box-shadow: 4px 4px 0px var(--white);
+    box-shadow: 4px 4px 0px var(--orange);
     margin-bottom: 30px;
 }
 
@@ -989,7 +995,7 @@ h3 {
 .footer-column a {
     font-size: 16px;
     font-weight: 700;
-    color: var(--border-color);
+    color: var(--bg-secondary);
     text-decoration: none;
     display: inline-block;
     transition: transform 0.2s, color 0.2s, text-shadow 0.2s;
@@ -1120,6 +1126,7 @@ h3 {
     border-top-color: transparent;
 }
 
+
 .spin-slow {
     animation: spin 12s linear infinite;
 }
@@ -1131,6 +1138,64 @@ h3 {
 @keyframes spin {
     100% {
         transform: rotate(360deg);
+    }
+}
+
+/* =========================================
+   STYLE & ANIMASI PARTIKEL
+   ========================================= */
+.deco-partikel {
+    position: absolute;
+    -webkit-mask-image: var(--partikel-url);
+    mask-image: var(--partikel-url);
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    z-index: 0;
+    
+    /* UBAH INI: Aktifkan kursor agar bisa disentuh */
+    pointer-events: auto;
+    cursor: crosshair; /* Kursor target/tembak ala brutalist */
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1.25), background-color 0.2s, filter 0.2s;
+}
+
+/* EFEK HOVER PARTIKEL */
+.deco-partikel:hover {
+    /* Saat disentuh: Animasi melayang berhenti, partikel membesar drastis, berubah Oranye */
+    animation-play-state: paused !important;
+    transform: scale(2) rotate(25deg) !important;
+    background-color: var(--orange) !important;
+    /* Memberikan bayangan kasar pada partikel SVG/Mask */
+    filter: drop-shadow(4px 4px 0px var(--border-color));
+    z-index: 100;
+}
+
+/* Pewarnaan Partikel */
+/* Pewarnaan Partikel */
+.deco-partikel.violet { background-color: var(--violet); }
+.deco-partikel.lime { background-color: var(--lime); }
+.deco-partikel.dark { background-color: var(--text-primary); }
+.deco-partikel.white { background-color: var(--white); }
+.deco-partikel.orange { background-color: var(--orange); }
+.deco-partikel.yellow { background-color: var(--yellow-lum); }
+
+/* Animasi Bergerak Acak */
+.float-random {
+    animation: floatRandom 6s ease-in-out infinite alternate;
+}
+
+@keyframes floatRandom {
+    0% { 
+        transform: translateY(0) translateX(0) rotate(0deg); 
+    }
+    50% { 
+        transform: translateY(-20px) translateX(15px) rotate(15deg); 
+    }
+    100% { 
+        transform: translateY(15px) translateX(-20px) rotate(-10deg); 
     }
 }
 

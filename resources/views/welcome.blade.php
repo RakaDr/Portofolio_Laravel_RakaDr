@@ -13,8 +13,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body style="--logo-url: url('{{ asset('images/Logo.png') }}');">
-    <!-- ============================================
+<body style="--logo-url: url('{{ asset('images/Logo.png') }}'); --partikel-url: url('{{ asset('images/partikel.png') }}');">    <!-- ============================================
          NAVIGATION
          ============================================ -->
     <nav class="nav" id="nav">
@@ -43,12 +42,15 @@
          ============================================ -->
     <section class="hero" id="home">
         <!-- Decorations -->
-        <div class="deco deco-c hero-deco-1 spin-slow parallax" data-speed="0.1"></div>
-        <div class="deco deco-plus hero-deco-2 float parallax" data-speed="-0.15"></div>
-        <div class="deco deco-circle hero-deco-3 float parallax" data-speed="0.05"></div>
-        <div class="deco deco-arc-yellow hero-deco-4 spin-slow parallax" data-speed="-0.1"></div>
-        <div class="deco deco-circle deco-circle-purple hero-deco-5 parallax" data-speed="0.2"></div>
-
+        
+        
+        <div class="deco deco-partikel violet float-random" style="top: 10%; left: 15%; width: 45px; height: 45px; animation-delay: 0s;"></div>
+        <div class="deco deco-partikel lime float-random" style="top: 25%; right: 12%; width: 60px; height: 60px; animation-delay: 1s;"></div>
+        <div class="deco deco-partikel violet float-random" style="bottom: 18%; left: 8%; width: 50px; height: 50px; animation-delay: 2s;"></div>
+        <div class="deco deco-partikel lime float-random" style="bottom: 15%; right: 25%; width: 35px; height: 35px; animation-delay: 0.5s;"></div>
+        <div class="deco deco-partikel dark float-random" style="top: 55%; left: 45%; width: 80px; height: 80px; opacity: 0.3; animation-delay: 1.5s;"></div>
+        <div class="deco deco-partikel orange float-random" style="top: 15%; left: 45%; width: 30px; height: 30px; animation-delay: 0.8s;"></div>
+        <div class="deco deco-partikel white float-random" style="bottom: 30%; right: 8%; width: 40px; height: 40px; opacity: 0.6; animation-delay: 2.2s;"></div>
         <div class="hero-container">
             <div class="hero-content">
                 <p class="hero-greeting mono">Hello, I'm Raka Dwi Randika</p>
@@ -90,6 +92,12 @@
          ABOUT SECTION
          ============================================ -->
     <section class="about" id="about">
+        <div class="deco deco-partikel lime float-random" style="top: 15%; left: 8%; width: 50px; height: 50px; animation-delay: 0.2s;"></div>
+        <div class="deco deco-partikel white float-random" style="bottom: 15%; right: 10%; width: 70px; height: 70px; opacity: 0.8; animation-delay: 1.5s;"></div>
+        <div class="deco deco-partikel yellow float-random" style="top: 60%; left: 5%; width: 40px; height: 40px; animation-delay: 1.1s;"></div>
+        <div class="deco deco-partikel lime float-random" style="top: 10%; right: 40%; width: 35px; height: 35px; animation-delay: 0.6s;"></div>
+        <div class="deco deco-partikel lime float-random" style="top: 15%; left: 8%; width: 50px; height: 50px; animation-delay: 0.2s;"></div>
+        <div class="deco deco-partikel white float-random" style="bottom: 15%; right: 10%; width: 70px; height: 70px; opacity: 0.8; animation-delay: 1.5s;"></div>
         <div class="about-container">
             <div class="about-image-wrapper">
                 <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=600&fit=crop"
@@ -117,6 +125,14 @@
          SKILLS SECTION
          ============================================ -->
     <section class="skills" id="skills">
+        
+        <div class="deco deco-partikel violet float-random" style="top: 8%; right: 15%; width: 45px; height: 45px; animation-delay: 0.5s;"></div>
+        <div class="deco deco-partikel orange float-random" style="bottom: 5%; left: 5%; width: 80px; height: 80px; opacity: 0.6; animation-delay: 1.2s;"></div>
+        <div class="deco deco-partikel dark float-random" style="top: 45%; left: 50%; width: 35px; height: 35px; animation-delay: 0.8s;"></div>
+        <div class="deco deco-partikel violet float-random" style="bottom: 15%; right: 25%; width: 55px; height: 55px; animation-delay: 2.1s;"></div>
+        <div class="deco deco-partikel orange float-random" style="top: 25%; left: 8%; width: 40px; height: 40px; opacity: 0.8; animation-delay: 0.4s;"></div>
+        <div class="deco deco-partikel orange float-random" style="bottom: 5%; left: 5%; width: 80px; height: 80px; opacity: 0.6; animation-delay: 1.2s;"></div>
+        <div class="deco deco-partikel dark float-random" style="top: 50%; left: 50%; width: 30px; height: 30px; animation-delay: 0.8s;"></div>
         <div class="skills-header">
             <p class="section-label mono">My Expertise</p>
             <h2>Skills & Tools</h2>
@@ -195,6 +211,11 @@
          EXPERIENCE SECTION
          ============================================ -->
     <section class="experience" id="experience">
+        <div class="deco deco-partikel dark float-random" style="top: 15%; left: 8%; width: 60px; height: 60px; animation-delay: 0.3s;"></div>
+        <div class="deco deco-partikel violet float-random" style="bottom: 20%; right: 5%; width: 90px; height: 90px; opacity: 0.5; animation-delay: 1.8s;"></div>
+        <div class="deco deco-partikel white float-random" style="top: 50%; right: 15%; width: 45px; height: 45px; opacity: 0.9; animation-delay: 0.9s;"></div>
+        <div class="deco deco-partikel violet float-random" style="bottom: 5%; left: 40%; width: 35px; height: 35px; animation-delay: 1.2s;"></div>
+    <div class="deco deco-partikel violet float-random" style="bottom: 20%; right: 5%; width: 90px; height: 90px; opacity: 0.5; animation-delay: 1.8s;"></div>
         <div class="experience-container">
             <div class="experience-header">
                 <p class="section-label mono">Experience</p>
@@ -227,6 +248,10 @@
          PROJECTS SECTION
          ============================================ -->
     <section class="projects" id="projects">
+        <div class="deco deco-partikel lime float-random" style="top: 5%; left: 12%; width: 55px; height: 55px; animation-delay: 0.7s;"></div>
+        <div class="deco deco-partikel yellow float-random" style="bottom: 8%; right: 10%; width: 50px; height: 50px; animation-delay: 0.1s;"></div>
+        <div class="deco deco-partikel orange float-random" style="top: 35%; right: 40%; width: 65px; height: 65px; opacity: 0.4; animation-delay: 1.1s;"></div>
+        <div class="deco deco-partikel lime float-random" style="bottom: 25%; left: 5%; width: 40px; height: 40px; animation-delay: 1.9s;"></div>
         <div class="projects-header">
             <p class="section-label mono">Projects</p>
             <h2>Featured Work</h2>
@@ -305,7 +330,11 @@
          CONTACT SECTION
          ============================================ -->
     <section class="contact" id="contact">
-        <div class="contact-container">
+        <div class="deco deco-partikel dark float-random" style="top: 12%; right: 15%; width: 60px; height: 60px; animation-delay: 0.9s;"></div>
+        <div class="deco deco-partikel white float-random" style="bottom: 20%; left: 8%; width: 75px; height: 75px; opacity: 0.7; animation-delay: 1.4s;"></div>
+        <div class="deco deco-partikel violet float-random" style="top: 40%; left: 15%; width: 45px; height: 45px; animation-delay: 0.3s;"></div>
+        <div class="deco deco-partikel dark float-random" style="bottom: 10%; right: 35%; width: 35px; height: 35px; animation-delay: 2.1s;"></div>
+            <div class="contact-container">
             <div class="contact-info">
                 <p class="section-label mono">Contact</p>
                 <h2 class="contact-title">Let's Build Together</h2>
@@ -378,7 +407,7 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-brand">
-                <div class="footer-logo">RAKA.</div>
+                <div class="footer-logo">RAKA_DR.</div>
                 <p class="footer-tagline">
                     Cyber security student. Coding instructor. Always learning.
                 </p>
@@ -386,7 +415,7 @@
 
             <div class="footer-links">
                 <div class="footer-column">
-                    <h4>Navigation</h4>
+                    <h4>NAVIGATION</h4>
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
@@ -396,11 +425,11 @@
                 </div>
 
                 <div class="footer-column">
-                    <h4>Social</h4>
+                    <h4>SOCIAL</h4>
                     <ul>
-                        <li><a href="#">LinkedIn</a></li>
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="#">Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/in/raka-dwi-randika-a856b433a/">LinkedIn</a></li>
+                        <li><a href="https://github.com/RakaDr">GitHub</a></li>
+                        <li><a href="https://www.instagram.com/rakaa_dr/">Instagram</a></li>
                     </ul>
                 </div>
             </div>
